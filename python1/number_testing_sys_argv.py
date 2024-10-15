@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
 import sys
-x = sys.argv[1]
-print(f"The number being tested is {x}.")
+number = int(sys.argv[1])
+print(f"The number being tested is {number}.")
+print(type(number))
+if number > 0:
+  print(f"{number} is positive.")
