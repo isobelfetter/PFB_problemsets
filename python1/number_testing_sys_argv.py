@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 import sys
-number = int(sys.argv[1])
-print(f"The number being tested is {number}.")
-if number > 0:
-  print(f"{number} is positive.")
-  if number < 50:
-    print(f"{number} is less than 50.")
-    if number%2 == 0:
-      print(f"{number} is an even number that is smaller than 50.")
-  elif number > 50:
-    print(f"{number} is greater than 50.")
-    if number%3 == 0:
-      print(f"{number} is larger than 50 and divisible by 3.")
+x = int(sys.argv[1])
+print(f"The number being tested is {x}.")
+if x > 0:
+  print(f"{x} is positive.")
+  if x < 50:
+    print(f"{x} is less than 50.")
+    if x%2 == 0:
+      print(f"{x} is an even number that is smaller than 50.")
+  elif x > 50:
+    print(f"{x} is greater than 50.")
+    if x%3 == 0:
+      print(f"{x} is larger than 50 and divisible by 3.")
   else:
-    print(f"{number} is fifty.")
-elif number < 0:
-  print(f"{number} is negative.")
+    print(f"{x} is fifty.")
+elif x < 0:
+  print(f"{x} is negative.")
 else:
-  print(f"{number} is zero.")
+  print(f"{x} is zero.")
