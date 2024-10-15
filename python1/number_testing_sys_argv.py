@@ -7,7 +7,13 @@ if number > 0:
   if number < 50:
     print(f"{number} is less than 50.")
     if number%2 == 0:
-      print(f"{number} is even.")
+      print(f"{number} is an even number that is smaller than 50.")
+  elif number > 50:
+    print(f"{number} is greater than 50.")
+    if number%3 == 0:
+      print(f"{number} is larger than 50 and divisible by 3.")
+  else:
+    print(f"{number} is fifty.")
 elif number < 0:
   print(f"{number} is negative.")
 else:
