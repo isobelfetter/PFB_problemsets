@@ -17,3 +17,4 @@ activity_sys = sys.argv[3]
 animal_sys = sys.argv[4]
 print(name_sys,color_sys,activity_sys,animal_sys)
 print(name_sys+color_sys+activity_sys+animal_sys)
+print(f"My name: {name_sys} {new_line}My favorite color: {color_sys} {new_line}My favorite activity: {activity_sys} {new_line}My favorite animal: {animal_sys}")
