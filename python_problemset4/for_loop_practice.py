@@ -13,10 +13,9 @@ print("evens:", evens)
 even_sum = 0
 for num in evens:
   even_sum = even_sum + num
-print("even sum:", even_sum)
 odds = [num for num in sorted_numbers if num%2 != 0]
 print("odds:", odds)
 odd_sum = 0
 for num in odds:
   odd_sum = odd_sum + num
-print("odd sum:", odd_sum)
+print(f'Sum of even numbers: {even_sum}\nSum of odds: {odd_sum}')
