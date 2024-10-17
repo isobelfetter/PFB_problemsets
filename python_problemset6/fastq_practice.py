@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
-with open("Python_06.seq.txt", "r") as read_file, open("reverse_complement.txt", "w") as write_file:
+line_count = 0
+total_char = 0
+with open("Python_06.fastq", "r") as read_file:
   for line in read_file:
     line = line.rstrip()
-    gene_id,seq = line.split()
-    complement = "".join(rc_dict.get(nt) for nt in seq)
-    rev_comp = complement[::-1]
-    write_file.write(f'>{gene_id}_reverse_comp\t{rev_comp}\n')
-print(f'File Written')
+    char_count = len(line)
+    line_count += 1
+    total_char += char_count
+avg_char = total_char / line_count
+print(f'Total lines: {line_count}\nTotal characters:{total_char}\nAverage line length:{avg_char}')
