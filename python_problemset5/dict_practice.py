@@ -14,3 +14,15 @@ for fav in fav_dict:
 import sys
 fav_thing = sys.argv[1]
 print(fav_dict[fav_thing])
+
+print(f'\nEnter one of these keys:')
+for key in fav_dict:
+  print(key)
+user_input = input()
+
+print(f"Isobel's favorite {user_input} is {fav_dict[user_input]}.")
+
+fav_dict['organism'] = "banana slug"
+
+fav_dict[sys.argv[1]] = sys.argv[2]
+print(f'Favorite {sys.argv[1]} set to {sys.argv[2]}.')
