@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 
-with open("Python_06.fasta", "r") as read_file:
+print(f'FASTA filepath:')
+file_input = input()
+fastaDict = {}
+with open(file_input, "r") as read_file:
   for line in read_file:
     line = line.rstrip()
-    gene_id,seq = line.split()
-    complement = "".join(rc_dict.get(nt) for nt in seq)
-    rev_comp = complement[::-1]
-    write_file.write(f'>{gene_id}_reverse_comp\t{rev_comp}\n')
-print(f'File Written')
+    if ">" in line:
+      line = line.replace(">","")
+      fastaDict[line] = ""
+      seq_name = line
+      line_partial = ""
+    else:
+      line_partial += line
+      fastaDict[seq_name] = line_partial
+    #gene_id,seq = line.split()
+    #print(gene_id,seq)
+print(fastaDict)
