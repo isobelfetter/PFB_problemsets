@@ -11,7 +11,13 @@ for nt in nt_set:
   count = full_sequence.count(nt)
   nt_counts[nt] = count
 
+GC_count = int(nt_counts["G"]) + int(nt_counts["C"])
+total_length = len(full_sequence)
+GC_content = GC_count / total_length
+
 print(f'\nNucleotide Count in Sequence:')
 for nt_key in sorted(nt_counts):
   print(nt_key,":",nt_counts[nt_key])
+print()
+print(f'GC content: {GC_content:.1%}')
 print()
