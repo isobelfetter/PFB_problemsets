@@ -1,0 +1,3 @@
+test_seq    ATTGGGCCCC
+test_seq2   AAAAGGGG
+test_seq3   TAGCTAGCTAGC
