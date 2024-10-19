@@ -22,7 +22,7 @@ codon_dict = {}
 for gene in fastaDict:
   codon_dict[gene] = {}
   codons1 = re.findall('[A-Z]{3}', line_partial)
-  codons2 = re.findall('[A-Z]{3}', line_partial[1:])
+  codons2 = re.findall('[A-Z]{3}', line_partial[1:]) #loop for iteration? 0-2 for strings, f-string to rename variable/key in dictionary
   codons3 = re.findall('[A-Z]{3}', line_partial[2:])
   complement = re.sub("A", "t", line_partial)
   complement = re.sub("T", "a", complement)
