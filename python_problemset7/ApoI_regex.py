@@ -26,3 +26,9 @@ for seq_name in fastaDict:
         start = found.start(0) + 1
         end = found.end(0)
         print(f'{start}-{end}')
+    cut_sequence = re.sub(r'([A|G])AATT([C|T])', r'\1^AATT\2', sequence)
+    print(cut_sequence)
+    fragments = cut_sequence.split('^')
+    sorted_fragments = sorted(fragments, key=len, reverse=True)
+    for fragment in sorted_fragments:
+        print(fragment)
