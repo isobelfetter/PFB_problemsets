@@ -1,3 +1,5 @@
 .DS_Store
 uniprot_sprot.fasta*
 s_paratyphi.prot.fa.*
+D_melanogaster_genomic.fna
+small_D_melanogaster_genomic.fna
