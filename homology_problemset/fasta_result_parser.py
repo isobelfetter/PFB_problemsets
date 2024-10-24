@@ -3,11 +3,21 @@
 import sys
 
 seq_length = sys.argv[1]
-algo_list = ['BL50', 'BP62', 'VT160', 'VT80', 'VT40', 'VT20', 'VT10']
+algorithm = sys.argv[2]
+
+if algorithm == 'SSEARCH':
+    algo_list = ['BL50', 'BP62', 'VT160', 'VT80', 'VT40', 'VT20', 'VT10']
+
+if algorithm == 'BLASTP':
+        algo_list = ['BLOSUM62', 'BLOSUM80', 'PAM30', 'PAM70']
+
 result_dict = {}
 
 for matrix in algo_list:
-    file_name = f'ss_{seq_length}_v_qfo_{matrix}.txt'
+    if algorithm == 'SSEARCH':
+        file_name = f'ss_{seq_length}_v_qfo_{matrix}.txt'
+    if algorithm == 'BLASTP':
+        file_name = f'blast_{seq_length}_v_qfo_{matrix}.txt'
     with open(file_name, 'r') as read_file:
         for line in read_file:
             line = line.rstrip()
